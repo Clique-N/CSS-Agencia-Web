@@ -9,7 +9,13 @@
 <body>
     <div class="container">
         <header>
-            <img src="LOGO.png" alt="Logo Y2K - Agencia Criativa Web / Letras estilizadas com uma estrela no final">            
+            <img src="LOGO.png" alt="Logo Y2K - Agencia Criativa Web / Letras estilizadas com uma estrela no final">
+                <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="hamburguer">
+                       <span></span> 
+                       <span></span> 
+                       <span></span> 
+                    </label>            
                 <nav>
                     <ul>
                         <li><a href="">Início</a></li>
@@ -34,10 +40,18 @@
             <section id="servicos">
                 <h5>Serviços</h5>
                     <div class="imagens">
-                    <img src="HTML.png" alt="Logo HTML">
-                    <img src="CSS.png" alt="Logo CSS">
-                    <img src="JS.png" alt="Logo JavaScript">
-                    <img src="REACT.png" alt="Logo React">
+                    <img src="HTML.png" alt="Logo HTML"
+                        srcset="HTML.png 600w, HTML.png 1200w, HTML.png 1800w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                    <img src="CSS.png" alt="Logo CSS"
+                        srcset="CSS.png 600w, CSS.png 1200w, CSS.png 1800w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                    <img src="JS.png" alt="Logo JavaScript"
+                        srcset="JS.png 600w, JS.png 1200w, JS.png 1800w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"                    >
+                    <img src="REACT.png" alt="Logo React"
+                        srcset="REACT.png 600w, REACT.png 1200w, REACT.png 1800w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"                    >
                     </div>
                 <p>Fornecemos um serviço na linguagem clássica de web desing com a adição de funções com suporte ao React, mantendo a simplicidade e estética.</p>
             </section>
@@ -55,6 +69,16 @@
                         sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw">
                         
                     </div>
+            </section>
+            <section id="formulario">
+                <form action="processa_formulario.php" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email" required>
+                    <button type="submit">Enviar</button>
+                </form>
             </section>
             <section id="contatos">
                 <a href="">Whatsapp</a>
