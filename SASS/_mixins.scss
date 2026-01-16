@@ -1,0 +1,17 @@
+@use 'variaveis';
+
+
+// Mixin padrão dos displays para .container, .sobre, .serviços e .feedbacks
+@mixin display{
+    display: variaveis.$display-p;
+    grid-template-rows: variaveis.$grid-temp-row;
+    justify-content: variaveis.$just-cont;
+    gap: variaveis.$esp-p;
+}
+
+// Mixin padrão para os textos 
+@mixin texts{
+    text-align: variaveis.$txt-al;
+    gap: variaveis.$esp-p;
+    margin-top: variaveis.$esp-p;
+} 

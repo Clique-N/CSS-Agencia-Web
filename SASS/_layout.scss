@@ -1,0 +1,98 @@
+@use 'variaveis';
+@use 'mixins';
+@use 'componentes';
+@use "sass:math";
+
+html, body { height: 100%; margin: 0; padding: 0; overflow-x: hidden; }
+
+.header__menu {
+    display: none;
+}
+.header__hamburguer {
+    display: none;
+    width: 35px;
+    height: 28px;
+    flex-direction: column;
+    cursor: pointer;
+}
+.header__span {
+    display: block;
+    height: 4px;
+    background: variaveis.$color-p;
+    border-radius: calc(variaveis.$size-p / 20);
+    transition: 1.3rem;
+}
+.container {
+    @include mixins.display;
+    grid-template-columns: 1fr 2fr 1fr;
+    min-height: 100vh;
+}
+.nav__list {
+    display: inline-flex;
+    gap: calc(variaveis.$esp-p * 4);
+    color: variaveis.$color-p;
+    grid-column: 2;
+}
+.nav__item {
+    text-align: variaveis.$txt-al;
+    color: variaveis.$color-p;
+}
+.nav__link {
+    color: variaveis.$color-p;
+}
+.sobre {
+    @include mixins.display;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column: 1/4;
+}
+.section__title {
+    @include mixins.texts;
+    grid-column: 2;
+}
+.sobre__text {
+    @include mixins.texts;
+    grid-column: 2;
+}
+.servicos {
+    @include mixins.display;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: 1/4;
+}
+.servicos__title {
+    @include mixins.texts;
+    grid-column: 2/4;
+}
+.servicos__img {
+    display: flex;
+    justify-content: variaveis.$just-cont;
+    gap: variaveis.$esp-p;
+    grid-column: 1/5;
+    grid-row: 2;    
+}
+.servicos__size__img {
+    max-width: calc(variaveis.$size-p * 1.5);
+    width: 100%;
+    height: auto;
+}
+.servicos__text {
+    @include mixins.texts;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+.feedbacks {
+    @include mixins.display;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.feedbacks__img {
+    display: flex;
+    justify-content: variaveis.$just-cont;
+    gap: variaveis.$esp-p;
+    grid-column: 1/5;
+    grid-row: 2;
+}
+.feedbacks__size__img {
+    width: calc(variaveis.$size-p * 5);
+    height: calc(variaveis.$size-p * 5);
+    grid-column: 1/4;
+    grid-row: 2;
+}

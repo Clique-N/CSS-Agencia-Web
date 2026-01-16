@@ -1,0 +1,95 @@
+@use 'variaveis';
+@use 'mixins';
+@use "sass:math";
+
+@media (max-width:600px) {
+    body {
+        font-size: variaveis.$font-size;
+    }
+
+    .header__hamburguer{
+        display: flex;
+        grid-column: 2;
+        justify-self: variaveis.$just-cont;
+    }
+    .nav__list{
+        width: variaveis.$size-p;
+        gap: variaveis.$esp-p;
+        padding: variaveis.$esp-p;
+        border-top: variaveis.$esp-p;
+        text-align: variaveis.$txt-al;
+        display: none;
+        flex-direction: column;        
+    }
+    #menu-toggle:checked + .header__hamburguer + nav ul {
+        display: flex;
+    }
+    #menu-toggle:checked + .header__hamburguer .header__span:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+    }
+    #menu-toggle:checked + .header__hamburguer .header__span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked + .header__hamburguer .header__span:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+
+    .sobre{
+        align-items: variaveis.$txt-al;
+        gap: variaveis.$esp-p;
+        display: flex;
+        flex-direction: column;        
+    }
+    .sobre__text{
+        max-width: calc(variaveis.$size-p * 4);
+        margin: variaveis.$alt-p;
+        font-size: variaveis.$font-size;
+        text-align: justify; 
+        line-height: 1.6;
+        width: 100%;
+    }
+    .servicos{
+        align-items: variaveis.$txt-al;
+        gap: variaveis.$esp-p;
+        display: flex;
+        flex-direction: column;
+    }
+    .servicos__title{
+        text-align: variaveis.$txt-al;
+    }
+    .servicos__text{
+        max-width: calc(variaveis.$size-p * 4);
+        margin: variaveis.$alt-p;
+        font-size: variaveis.$font-size;
+        line-height: 1.6;
+        text-align: justify; 
+        width: 100%;
+    }
+    .servicos__img{
+        display: variaveis.$display-p;
+        gap: variaveis.$esp-p;
+        justify-content: variaveis.$just-cont;
+        align-items: variaveis.$txt-al;
+        grid-template-columns: 1fr 1fr;        
+    }
+    .servicos__size__img{
+        width: calc(variaveis.$size-p * 1.2);
+        height: variaveis.$alt-p;
+    }
+    .feedbacks{
+        align-items: variaveis.$txt-al;
+        gap: variaveis.$esp-p;
+        padding: variaveis.$esp-p;
+        flex-direction: column;
+        display: flex;
+    }
+    .feedbacks__img{
+        gap: variaveis.$esp-p;
+        justify-content: variaveis.$just-cont;
+        align-items: variaveis.$txt-al;
+    }
+    .feedbacks__size__img{
+        width: calc(variaveis.$size-p * 2);
+        height: variaveis.$alt-p;        
+    }
+}

@@ -1,0 +1,16 @@
+@use 'variaveis';
+@use "sass:math";
+
+body{
+    background: #0B0022;
+    color: variaveis.$color-p;
+    font-size: variaveis.$font-size;
+}
+
+main {
+    grid-column: 1/4;
+}
+main section img{
+    grid-column: 1/4;
+    height: 695;
+}
